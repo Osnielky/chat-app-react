@@ -8,21 +8,21 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
         if (room !== '' && username !== '') {
             socket.emit('join_room', { username, room });
         }
-        navigate('/chat', { replace: true }); // Add this
+        navigate('/chat', { replace: true }); 
 
     };
     return (
         <div className={styles.container}>
             <div className={styles.formContainer}>
-                <h1>{`<>DevRooms</>`}</h1>
+                <h1>{`<>ChatRooms</>`}</h1>
                 <input className={styles.input} placeholder='Username...' onChange={(e) => setUsername(e.target.value)} />
 
                 <select className={styles.input} onChange={(e) => setRoom(e.target.value)}>
-                    <option>-- Select Room --</option>
-                    <option value='javascript'>JavaScript</option>
-                    <option value='node'>Node</option>
-                    <option value='express'>Express</option>
-                    <option value='react'>React</option>
+                    <option>-- Select phone --</option>
+                    <option value='2543213773'>(254) 321-3773</option>
+                    <option value='1111111111'>1111111111</option>
+                    <option value='2222222222'>2222222222</option>
+                    <option value='3333333333'>3333333333</option>
                 </select>
 
                 <button
